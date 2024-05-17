@@ -1,5 +1,6 @@
 const gridElement = document.getElementById('grid');
 
+
 for ( i=0 ; i < 100; i++) {
     const articleElement = document.createElement('article');
     gridElement.appendChild(articleElement);
@@ -11,4 +12,4 @@ for ( i=0 ; i < 100; i++) {
         articleElement.classList.add('active')
         console.log(spanElement.innerText)
     })
-}
+};
