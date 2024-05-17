@@ -42,12 +42,24 @@ main {
 }
 
 #grid>article {
-    width: calc(100% / 10);
     aspect-ratio: 1/1;
     border: 2px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+}
+
+.big {
+    width: calc(100% / 10);
+}
+
+.medium {
+    width: calc(100% / 9);
+}
+
+.small {
+    width: calc(100% / 7);
 }
 
 

@@ -1,21 +1,38 @@
-const gridElement = document.getElementById('grid');
 const buttonElement = document.querySelector('button');
+const selectElement = document.getElementById('difficulty')
 
-for ( i=0 ; i < 100; i++) {
-    const articleElement = document.createElement('article');
-    gridElement.appendChild(articleElement);
-    articleElement.classList.add('big')
-    const spanElement = document.createElement('span')
-    articleElement.appendChild(spanElement);
-    spanElement.append(i + 1)
+let caselle = ''
 
-    articleElement.addEventListener('click', function() {
-        articleElement.classList.add('active')
-        console.log(spanElement.innerText)
-    })
+buttonElement.addEventListener('click', function () {
+    if (selectElement.value === 'easy') {
+        caselle = 100
+        createGrid(caselle, 'big')
+    }
+    else if (selectElement.value === 'medium') {
+        caselle = 81;
+        createGrid(caselle, 'medium');
+    }
+    else if (selectElement.value === 'hard') {
+        caselle = 49;
+        createGrid(caselle, 'small')}
+});
 
-    buttonElement.addEventListener('click', function() {
-        articleElement.classList.remove('active')
-        console.log(spanElement.innerText)
-    })
-};
+
+function createGrid(slot, size) {
+    const gridElement = document.getElementById('grid');
+    gridElement.innerHTML = '';
+
+    for (let i = 0; i < slot; i++) {
+        const articleElement = document.createElement('article');
+        articleElement.classList.add(size);
+        gridElement.appendChild(articleElement);
+        const spanElement = document.createElement('span');
+        articleElement.appendChild(spanElement);
+        spanElement.append(i + 1);
+
+        articleElement.addEventListener('click', function () {
+            articleElement.classList.add('active');
+            console.log(spanElement.innerText);
+        });
+    }
+}
