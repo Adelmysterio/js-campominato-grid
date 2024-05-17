@@ -11,4 +11,13 @@
     width: calc(100% / 10 - 4px);
     height: calc(100% / 10 - 4px);
     border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#grid>article.active {
+    background-color: rgb(41, 41, 53);
+    color: white;
 }
