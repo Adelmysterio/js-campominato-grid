@@ -6,4 +6,9 @@ for ( i=0 ; i < 100; i++) {
     const spanElement = document.createElement('span')
     articleElement.appendChild(spanElement);
     spanElement.append(i + 1)
+
+    articleElement.addEventListener('click', function() {
+        articleElement.classList.add('active')
+        console.log(spanElement.innerText)
+    })
 }

@@ -10,3 +10,4 @@ creo un ciclo for con indice massimo 100
     appendo l indice come contenuto dello span
     selezione article e creo un event listener che risponda al click
         che aggiunga una classe active al article
+        stampo il contenuto di span
